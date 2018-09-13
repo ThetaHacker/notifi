@@ -1,12 +1,14 @@
 <input id="titlen" placeholder="Title">
 <input id="bodyn" placeholder="Body">
+<img src="https://i2.wp.com/hisour.com/wp-content/uploads/2018/03/RGB-color-model.jpg">
 <button onclick="sendn()">SEND</button>
 <script>
   Notification.requestPermission()
   function sendn() {
     var options = {
       body: document.getElementById("bodyn").value,
-      icon: document.getElementById("iconpre")
+      icon: document.getElementById("iconpre"),
+      requireInteraction: shouldRequireInteraction
     };
     var n = new Notification(document.getElementById("titlen").value, options);
   }
