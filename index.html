@@ -7,7 +7,7 @@
   function sendn() {
     var options = {
       body: document.getElementById("bodyn").value,
-      icon: document.getElementById("iconpre"),
+      icon: document.getElementById("iconpre").value,
       requireInteraction: shouldRequireInteraction
     };
     var n = new Notification(document.getElementById("titlen").value, options);
