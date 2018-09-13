@@ -1,2 +1,13 @@
-<button>
-</button>
+<input id="titlen" placeholder="Title">
+<input id="bodyn" placeholder="Body">
+<button onclick="sendn()">SEND</button>
+<script>
+  Notification.requestPermission()
+  function sendn() {
+    var options = {
+      body: document.getElementById("bodyn").value,
+      icon: document.getElementById("iconpre")
+    };
+    var n = new Notification(document.getElementById("titlen").value, options);
+  }
+</script>
